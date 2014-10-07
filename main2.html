@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>window.open Example</title>
+
+   <script src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+       var url= 'http://www.tcc-africa.org';
+         navigator.app.loadUrl(url, { openExternal:true });
+    }
+	function popup() {
+       var url= 'http://www.tcc-africa.org';
+         navigator.app.loadUrl(url, { openExternal:true });
+    }
+	
+
+    </script>
+  </head>
+  <body>
+  <input type="button" onClick="popup()" value="Pop Up" />
+  </body>
+</html>

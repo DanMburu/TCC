@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+ <script src="phonegap.js"></script>
+ 
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+ // Cordova is ready
+    //
+	//navigator.app.loadUrl("http://www.tcc-africa.org", {openExternal:true});
+    function onDeviceReady() {
+		 alert('ready dan');
+		 window.location.href = "http://www.tcc-africa.org"; 
+		navigator.app.loadUrl("http://www.tcc-africa.org", {openExternal:true});
+		navigator.app.exitApp();
+        /* var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+         ref.addEventListener('exit', function() { alert(event.type); });*/
+    } 
+	function go2(){
+		alert('Clicked Go 2');
+		window.location.href = "http://www.tcc-africa.org"; 
+		navigator.app.loadUrl("http://www.tcc-africa.org", {openExternal:true});
+	}
+	function go(){
+	   window.location.href = "http://www.tcc-africa.org"; 
+		navigator.app.loadUrl("http://www.tcc-africa.org");
+	}
+    </script>
+
+</head>
+<body>
+
+          
+            <div id="deviceready" class="blink1">
+           <table width="100%">
+           <tr>
+           <td width="100%" align="center">
+                <p class="event listening">Connecting...</p>
+               
+            </td>
+            </tr>
+            </table>
+          
+            </div>
+            
+              <a href="#" onclick="go()">Google External</a>
+            
+              <a onClick="go2()"  rel="external">Mobile HTML5 Blog</a> 
+              
+              <a href="http://www.tcc-africa.org" target="_blank" rel="external">With Blank</a> 
+</body>
+</html>
